@@ -62,3 +62,5 @@ if lan_choice == '2':
     input()
     while True:
         time_measure(pt)
+else:
+    print("Option not avaible! \n")
