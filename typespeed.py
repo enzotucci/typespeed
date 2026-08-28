@@ -31,8 +31,7 @@ pt = [
     "bênção", "órgão", "paciência", "consciência", "substância", "frequência"
 ]
 
-def time_measure(language):
-
+def time_measure(language, correct, wrong):
     random_word = random.choice(language)
 
     print("Type the following word as fast as you can: \n")
@@ -48,12 +47,22 @@ def time_measure(language):
     execution_time = end_time - start_time
 
     if typed_word == random_word:
+        correct = correct + 1
         print("\n Time elapsed:", execution_time, "seconds")
+        print(correct, " Correct answers")
     else:
+        wrong = wrong + 1
         print("Wrong spelling!")
         print("You typed ", typed_word, " instead of ", random_word)
+        print(wrong, " Wrong answers")
+
+    return correct, wrong
 
 def main():
+
+    correct = 0
+    wrong = 0
+
     print("TypeSpeed \n\n")
     print("Available languages: English (1), Portuguese (2)")
     lan_choice = input("Select your language: \n")
@@ -62,12 +71,12 @@ def main():
             print("Press enter to continue, CTRL + C to exit")
             input()
             while True:
-                time_measure(en)
+                correct, wrong = time_measure(en, correct, wrong)
         elif lan_choice == '2':        
             print("Press enter to continue, CTRL + C to exit")
             input()
             while True:
-                time_measure(pt)
+                correct, wrong = time_measure(pt, correct, wrong)
         else:
             print("Option not available! \n")
     except KeyboardInterrupt:
