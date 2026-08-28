@@ -49,18 +49,24 @@ def time_measure(language):
     print("\n Time elapsed:", execution_time, "seconds")
 
 
-print("TypeSpeed \n\n")
-print("Avaible languages: English (1), Portuguese (2)")
-lan_choice = input("Select your language: \n")
-if lan_choice == '1':        
-    print("Press enter to continue, CTRL + C to exit")
-    input()
-    while True:
-        time_measure(en)
-if lan_choice == '2':        
-    print("Press enter to continue, CTRL + C to exit")
-    input()
-    while True:
-        time_measure(pt)
-else:
-    print("Option not avaible! \n")
+def main():
+    print("TypeSpeed \n\n")
+    print("Avaible languages: English (1), Portuguese (2)")
+    lan_choice = input("Select your language: \n")
+    try:
+        if lan_choice == '1':        
+            print("Press enter to continue, CTRL + C to exit")
+            input()
+            while True:
+                time_measure(en)
+        if lan_choice == '2':        
+            print("Press enter to continue, CTRL + C to exit")
+            input()
+            while True:
+                time_measure(pt)
+        else:
+            print("Option not avaible! \n")
+    except KeyboardInterrupt:
+        print("\n Exiting...")
+
+main()
