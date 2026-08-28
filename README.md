@@ -1,2 +1,2 @@
 # typespeed
-Simple, terminal based, typing speed app
+A simple, terminal based, typing speed app.
