@@ -1,8 +1,7 @@
 import time
 import random
 
-def time_measure():
-    wordlist = [
+en = [
     "japan", "cow", "green", "yellow", "cat", "bitcoin", "price", "random",
     
     "fox", "code", "jump", "blue", "data", "quiz", "web", "zoom", "wolf", "star",
@@ -17,7 +16,24 @@ def time_measure():
     "cybersecurity", "javascript", "quantum", "infinity", "algorithm", "phenomenon"
 ]
 
-    random_word = random.choice(wordlist)
+pt = [
+    "sol", "mar", "casa", "bola", "gato", "azul", "café", "vida", "fogo", "água",
+    "ouro", "alvo", "jogo", "paz", "luz", "rocha", "fácil", "útil",
+    
+    "brasil", "computador", "janela", "música", "coração", "caneta", "frango", "floresta",
+    "projeto", "código", "sombra", "viagem", "Espelho", "Planeta", "Xícara", "Açúcar",
+    "Goiaba", "Foguete", "Trovão", "Gelo",
+    
+    "algoritmo", "astronauta", "dinossauro", "universo", "velocidade", "terminal", 
+    "teclado", "biblioteca", "arquitetura", "borboleta", "chocolate", "dicionário",
+    
+    "paralelepípedo", "seqüência", "exceção", "antiguidade", "cabeçalho", "quilômetro",
+    "bênção", "órgão", "paciência", "consciência", "substância", "frequência"
+]
+
+def time_measure(language):
+
+    random_word = random.choice(language)
 
     print("Type the following word as fast as you can: \n")
 
@@ -34,7 +50,15 @@ def time_measure():
 
 
 print("TypeSpeed \n\n")
-print("Press enter to continue")
-input()
-while True:
-    time_measure()
+print("Avaible languages: English (1), Portuguese (2)")
+lan_choice = input("Select your language: \n")
+if lan_choice == '1':        
+    print("Press enter to continue, CTRL + C to exit")
+    input()
+    while True:
+        time_measure(en)
+if lan_choice == '2':        
+    print("Press enter to continue, CTRL + C to exit")
+    input()
+    while True:
+        time_measure(pt)
