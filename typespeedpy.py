@@ -63,7 +63,7 @@ def main():
     correct = 0
     wrong = 0
 
-    print("TypeSpeed")
+    print("TypeSpeedPy")
     print("gitub.com/enzotucci \n")
     print("Available languages: English (1), Portuguese (2)")
     lan_choice = input("Select your language: \n")
