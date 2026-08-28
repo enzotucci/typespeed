@@ -41,13 +41,17 @@ def time_measure(language):
 
     start_time = time.perf_counter()
 
-    input()
+    typed_word = input()
 
     end_time = time.perf_counter()
 
     execution_time = end_time - start_time
-    print("\n Time elapsed:", execution_time, "seconds")
 
+    if typed_word == random_word:
+        print("\n Time elapsed:", execution_time, "seconds")
+    else:
+        print("Wrong spelling!")
+        print("You typed ", typed_word, " instead of ", random_word)
 
 def main():
     print("TypeSpeed \n\n")
