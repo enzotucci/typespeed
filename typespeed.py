@@ -47,11 +47,11 @@ def time_measure(language, correct, wrong):
     execution_time = end_time - start_time
 
     if typed_word == random_word:
-        correct += 1
+        correct = correct + 1
         print("\n Time elapsed:", execution_time, "seconds")
         print(correct, " Correct answers")
     else:
-        wrong += 1
+        wrong = wrong + 1
         print("Wrong spelling!")
         print("You typed ", typed_word, " instead of ", random_word)
         print(wrong, " Wrong answers")
@@ -64,6 +64,7 @@ def main():
     wrong = 0
 
     print("TypeSpeed \n\n")
+    print("gitub.com/enzotucci \n")
     print("Available languages: English (1), Portuguese (2)")
     lan_choice = input("Select your language: \n")
     try:
