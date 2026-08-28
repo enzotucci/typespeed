@@ -43,15 +43,15 @@ def time_measure(language):
 
     input()
 
-    endtime = time.perf_counter()
+    end_time = time.perf_counter()
 
-    execution_time = endtime - start_time
+    execution_time = end_time - start_time
     print("\n Time elapsed:", execution_time, "seconds")
 
 
 def main():
     print("TypeSpeed \n\n")
-    print("Avaible languages: English (1), Portuguese (2)")
+    print("Available languages: English (1), Portuguese (2)")
     lan_choice = input("Select your language: \n")
     try:
         if lan_choice == '1':        
@@ -59,14 +59,14 @@ def main():
             input()
             while True:
                 time_measure(en)
-        if lan_choice == '2':        
+        elif lan_choice == '2':        
             print("Press enter to continue, CTRL + C to exit")
             input()
             while True:
                 time_measure(pt)
         else:
-            print("Option not avaible! \n")
+            print("Option not available! \n")
     except KeyboardInterrupt:
-        print("\n Exiting...")
+        print("\nExiting...")
 
 main()
